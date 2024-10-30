@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Quiz Shapovalov</title>
+		<link rel="stylesheet" href="./css/Quiz Shapovalov.css" />
+		<script src="./lib/anime.min.js"></script>
+	</head>
+
+	<body>
+		<div class="result-container">
+			<div id="nickname_result_text"></div>
+			<div class="results">
+				<span class="star" id="star1">&#9733;</span>
+				<span class="star" id="star2">&#9733;</span>
+				<span class="star" id="star3">&#9733;</span>
+				<span class="star" id="star4">&#9733;</span>
+				<span class="star" id="star5">&#9733;</span>
+			</div>
+			<div id="text-root-element">
+				<div id="wrapper">
+					<div id="text"></div>
+				</div>
+			</div>
+			<button id="buttonRestart" onclick="restart()"><img src="restart_image.png" alt="restart_image" /></button>
+		</div>
+		<div class="h1-and-time-loader-container">
+			<h1>Quiz</h1>
+			<div id="time-loader-container">
+				<span
+					><b>Zeit <a id="time"></a></b
+				></span>
+
+				<div class="loader"></div>
+			</div>
+		</div>
+
+		<!-- <form method="post" action="http://wifi.1av.at/quiz.php">
+			<input type="hidden" name="type" value="getcount" />
+			<button type="submit">Absenden</button>
+		</form> -->
+		<div id="name-section">
+			<label for="nameInput"><b>For starting the quiz, enter your name:</b> </label><br />
+			<div>
+				<input type="text" name="nameInput" id="nameInput" />
+				<button id="nameSubmit">
+					<!-- <object data="enter.svg" type="image/svg+xml" width="20"></object> -->
+				</button>
+			</div>
+		</div>
+		<div id="loaderSpin"></div>
+		<div class="question-container">
+			<h4></h4>
+
+			<ul></ul>
+		</div>
+		<div class="quiz-container">
+			<div id="correctMessage" class="hidden">Richtig!</div>
+			<div id="wrongMessage" class="hidden">Falsch!</div>
+		</div>
+		<div class="text-with-border" id="textElement"></div>
+
+		<script src="./lib/axios.min.js"></script>
+		<script src="./js/helpers.js"></script>
+		<script src="./js/Quiz Shapovalov_ver2.js"></script>
+	</body>
+</html>
